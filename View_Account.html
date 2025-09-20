@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BANK — View Account</title>
+  <link rel="stylesheet" href="/Css/View_Account.css">
+    <link rel="stylesheet" href="/Css/Homepage.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="bank-name">MyBank</span>
+      <span class="tag">Secure Banking Portal</span>
+    </div>
+    <nav class="top-nav" style="margin-left: auto;">
+      <a href="/Html/Homepage.html" class="nav-link active">Home</a>
+      <a href="/Html/Register_Login.html" class="nav-link">SignUp/Login</a>
+      <!-- <a href="#" class="nav-link">Login</a> -->
+      <a href="#" class="nav-link">Support</a>
+    </nav>
+    <div class="dropdown">
+      <button class="dropbtn">☰</button>
+      <div class="dropdown-content">
+        <a href="/Html/Customer_Profile.html">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <section class="account-card">
+      <h2>Account Details</h2>
+      <div class="details-grid">
+        <div class="field">
+          <label>Account Holder's Name</label>
+          <p id="custName"></p>
+        </div>
+        <div class="field">
+          <label>Customer SSN ID</label>
+          <p id="custSSN"></p>
+        </div>
+        <div class="field">
+          <label>IFSC Code</label>
+          <p id="custIFSC"></p>
+        </div>
+        <div class="field">
+          <label>Account Number</label>
+          <p id="custAccNum"></p>
+        </div>
+        <div class="field">
+          <label>Account Balance</label>
+          <p id="custBalance"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 MyBank. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+  
+  <script src="/JavaScript/View_Account.js"></script>
+</body>
+</html>

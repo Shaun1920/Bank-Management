@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Profile Entry</title>
+  <link href="/Css/Customer_Profile.css" rel="stylesheet">
+  <link rel="stylesheet" href="/Css/Homepage.css">
+ 
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="bank-name">MyBank</span>
+      <span class="tag">Secure Banking Portal</span>
+    </div>
+    <nav class="top-nav" style="margin-left: auto;">
+      <a href="/Html/Homepage.html" class="nav-link active">Home</a>
+      <a href="/Html/Register_Login.html" class="nav-link">SignUp/Login</a>
+      <!-- <a href="#" class="nav-link">Login</a> -->
+      <a href="#" class="nav-link">Support</a>
+    </nav>
+    <div class="dropdown">
+      <button class="dropbtn">☰</button>
+      <div class="dropdown-content">
+        <a href="/Html/Customer_Profile.html">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Profile</h1>
+    
+    <!-- Personal Data Section -->
+    <h2>Personal Data</h2>
+    <div class="details">
+      <div class="label">Customer SSN ID:</div> <div class="value"><input type="text" maxlength="7"></div>
+      <div class="label">Customer Name:</div> <div class="value"><input type="text" maxlength="50"></div>
+      <div class="label">Date of Birth:</div> <div class="value"><input type="date"></div>
+      <div class="label">Gender:</div> <div class="value"><input type="text"></div>
+      <div class="label">Marital Status:</div> <div class="value"><input type="text"></div>
+      <div class="label">Aadhar Card:</div> <div class="value"><input type="text" id="aadhar" minlength="12" maxlength="12"  onblur="maskInput(this)"></div>
+      <div class="label">PAN Card:</div> <div class="value"><input type="text" id="pan" minlength="10" maxlength="10" onblur="maskInput(this)"></div>
+      <div class="label">Email:</div> <div class="value"><input type="email"></div>
+      <div class="label">Contact No.:</div> <div class="value"><input type="text" id="contact" maxlength="10" onblur="maskInput(this)"></div>
+      <div class="label">Address:</div> <div class="value"><textarea rows="2" maxlength="100"></textarea></div>
+    </div>
+    
+    <!-- Bank Details Section -->
+    <h2>Bank Details</h2>
+    <div class="details">
+      <div class="label">Account Name:</div> <div class="value"><input type="text" maxlength="50"></div>
+      <div class="label">IFSC Code:</div> <div class="value"><input type="text" maxlength="11"></div>
+      <div class="label">Account No.:</div> <div class="value"><input type="text" id="account" maxlength="20" onblur="maskInput(this)"></div>
+     <div class="label">Account Balance:</div> <div class="value"><input type="number" value="5000"></div>
+
+    </div>
+    
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="submit-btn" onclick="submitForm()">Save</button>
+      <button class="edit-btn" onclick="enableEdit()">Edit</button>
+      <button class="cancel-btn" onclick="cancelEdit()">Cancel</button>
+    </div>
+    
+  </div>
+
+    <footer class="site-footer">
+    <p>&copy; 2025 MyBank. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+   <script src="/JavaScript/Customer_Profile.js"></script> 
+</body>
+</html>

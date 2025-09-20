@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyBank - Secure Banking Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Css/Register_Login.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="bank-name">MyBank</span>
+      <span class="tag">Secure Banking Portal</span>
+    </div>
+    <nav class="top-nav">
+      <a href="/Html/Homepage.html" class="nav-link active">Home</a>
+      <a href="/Html/Register_Login.html" class="nav-link">SignUp/Login</a>
+      <a href="#" class="nav-link">Support</a>
+    </nav>
+    <div class="dropdown">
+      <button class="dropbtn">☰</button>
+      <div class="dropdown-content">
+        <a href="/Html/Customer_Profile.html">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Registration Page -->
+  <div class="container" id="registrationForm">
+    <div class="form signup">
+      <div class="title">Registration</div>
+      <form id="signupForm">
+        <!-- First & Last Name -->
+        <div class="form-group">
+          <div class="input-field">
+            <input type="text" id="fname" maxlength="50" placeholder="First Name" required pattern="[A-Za-z]+">
+            <i class="uil uil-user"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lname" maxlength="50" placeholder="Last Name" required pattern="[A-Za-z]+">
+            <i class="uil uil-user"></i>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="input-field">
+          <input type="email" id="email" placeholder="Email" required>
+          <i class="uil uil-envelope"></i>
+        </div>
+        <!-- Password & Confirm -->
+        <div class="form-group">
+          <div class="input-field"> 
+            <input type="password" id="password" minlength="6" maxlength="30" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{6,30}$">
+            <i class="uil uil-lock"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" id="confirmPassword" minlength="6" maxlength="30" placeholder="Confirm Password" required>
+            <i class="uil uil-lock"></i>
+          </div>
+        </div>
+        <!-- Address -->
+        <div class="input-field">
+          <input type="text" id="address" minlength="5" maxlength="100" placeholder="Address" required>
+          <i class="uil uil-location-point"></i>
+        </div>
+        <!-- Contact -->
+        <div class="input-field">
+          <input type="tel" id="contact" maxlength="10" placeholder="Contact No." required pattern="[789][0-9]{9}">
+          <i class="uil uil-phone"></i>
+        </div>
+        <!-- Button -->
+        <div class="button"><input type="submit" value="Signup"></div>
+      </form>
+      <div class="login-signup">Already a member? <a onclick="gotoLogin()" href="#">Login Now</a></div>
+    </div>
+  </div>
+
+  <!-- Login Page -->
+  <div class="container hidden" id="loginForm">
+    <div class="form login">
+      <div class="title">Login</div>
+      <form id="loginFormInner">
+        <!-- SSN ID -->
+        <div class="input-field">
+          <input type="text" id="loginSSN" placeholder="Customer SSN ID" required pattern="[0-9]{7}">
+          <i class="uil uil-id-card"></i>
+        </div>
+        <!-- Password -->
+        <div class="input-field">
+          <input type="password" id="loginPassword" maxlength="30" placeholder="Password" required>
+          <i class="uil uil-lock"></i>
+        </div>
+        <!-- Button -->
+        <div class="button"><input type="submit" value="Login"></div>
+      </form>
+      <div class="login-signup">New here? <a onclick="gotoRegister()" href="#">Register Now</a></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 MyBank. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+<script src="/JavaScript/Register_Login.js"></script>
+</body>
+</html>
