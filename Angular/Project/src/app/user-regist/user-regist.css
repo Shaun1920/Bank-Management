@@ -1,0 +1,90 @@
+/* Background with soft gradient */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #f0f4ff, #dce5ff);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+/* Card box */
+.form-card {
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 380px;
+  transition: 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  font-size: 22px;
+  color: #1a237e;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 90%;
+  padding: 9px 12px;
+  border: 1px solid #d0d7e1;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: #4a6cf7;
+  outline: none;
+  box-shadow: 0 0 6px rgba(74, 108, 247, 0.2);
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  background: #4a6cf7;
+  color: white;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #3453c4;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .form-card {
+    padding: 25px 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
